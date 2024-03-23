@@ -3,7 +3,7 @@ import ReviewForm from './ReviewForm';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/feedback-front">
       <Routes>
         <Route path="/maugli" element={<ReviewForm park="Мауглі" />} />
         <Route path="/manki" element={<ReviewForm park="Манкі" />} />
