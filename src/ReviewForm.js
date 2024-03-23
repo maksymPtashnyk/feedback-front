@@ -22,7 +22,7 @@ const ReviewForm = ({park}) => {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/feedback', {
+      const response = await fetch('https://feedback-back.vercel.app/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
