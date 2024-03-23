@@ -8,7 +8,7 @@ const App = () => {
         <Route path="/maugli" element={<ReviewForm park="Мауглі" />} />
         <Route path="/manki" element={<ReviewForm park="Манкі" />} />
       </Routes>
-    </Router> 
+    </Router>    
   );
 };
 
