@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Input, Button, Box } from '@mui/material';
 
-const ReviewForm = ({park}) => {
+const ReviewForm = ({ park }) => {
   const [review, setReview] = useState('');
   const [userName, setUserName] = useState('');
 
   const handleChangeFeedback = (event) => {
     setReview(event.target.value);
   };
+  
   const handleChangeName = (event) => {
     setUserName(event.target.value);
   };
@@ -44,9 +45,18 @@ const ReviewForm = ({park}) => {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, margin: 'auto', padding: 2, backgroundColor: 'azure' }}>
+    <Box sx={{
+      marginTop: 6,
+      margin: 'auto', // Збереження відступу зліва і справа, вирівнюючи по центру
+      maxWidth: 300,
+      padding: 2,
+      backgroundColor: 'rgba(255, 255, 255, 0.3)', // Прозорий фон
+      borderRadius: '10px', // Заокруглені кути
+      backdropFilter: 'blur(10px)', // Ефект розмиття
+      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.3)' // Тінь
+    }}>
       <h2>Залиште свій відгук про парк {park}</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{ textAlign: 'center' }}>
         <Input
           label="Ваше ім'я"
           multiline
@@ -58,9 +68,9 @@ const ReviewForm = ({park}) => {
           placeholder="Ваше ім'я"
           required
           sx={{
-            backgroundColor: 'white',
-            borderRadius: '4px',
-            padding: '5px',
+            backgroundColor: 'rgba(255, 255, 255, 0.5)', // Прозорий фон
+            borderRadius: '6px',
+            padding: '10px',
             marginBottom: '20px',
           }}
         />
@@ -71,17 +81,16 @@ const ReviewForm = ({park}) => {
           value={review}
           onChange={handleChangeFeedback}
           fullWidth
-          placeholder='Ваш відгук'
+          placeholder='Поділіться враженнями'
           required
           sx={{
-            backgroundColor: 'white',
-            borderRadius: '4px',
-            padding: '5px',
+            backgroundColor: 'rgba(255, 255, 255, 0.5)', // Прозорий фон
+            borderRadius: '6px',
+            padding: '10px',
             marginBottom: '20px',
-            flexDirection: 'column'
           }}
         />
-        <Button type="submit" variant="contained" color="primary">
+        <Button type="submit" variant="contained" color="primary" sx={{ margin: 'auto', display: 'block' }}>
           Надіслати відгук
         </Button>
       </form>
