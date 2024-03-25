@@ -78,6 +78,7 @@ const ReviewForm = ({park}) => {
             borderRadius: '4px',
             padding: '5px',
             marginBottom: '20px',
+            flexDirection: 'column'
           }}
         />
         <Button type="submit" variant="contained" color="primary">
