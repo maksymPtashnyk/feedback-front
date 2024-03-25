@@ -79,9 +79,6 @@ const ReviewForm = ({ park }) => {
               borderRadius: '6px',
               padding: '10px',
               marginBottom: '20px',
-              '&:focus': { // Стилі для фокусу
-                boxShadow: '0 0 0 2px rgba(0, 50, 166, 0.3)', // Тінь під час фокусування
-              }
             }}
           />
           <Input
